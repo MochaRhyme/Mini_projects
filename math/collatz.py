@@ -30,7 +30,8 @@ if view:
         plt.annotate(
             str(value),
             (x[i], resT[i]),
-            xytext=(3, 0),
+            xytext=(3, 5),
+            textcoords='offset points',
             ha='center'
         )
     #---
@@ -39,3 +40,4 @@ if view:
     plt.xlabel('step')
     plt.ylabel('value')
     plt.show()
+    plt.close()
