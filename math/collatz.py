@@ -45,6 +45,7 @@ while nTP!=1:
         resTP.append(nTP)
     TPstep+=1
     print(f'[{TPstep}번째에 {nTP}로 변합니다.]')
+print(resTP)
 
 if view:
     x=range(Tstep+1)
