@@ -2,50 +2,51 @@ try:
     import matplotlib.pyplot as plt
     view=1
 except:
-    print('matplotlib이 설치되어 있지 않음 : 시각화 코드는 동작하지 않습니다!')
+    print('matplotlib is not installed : visualization code will not work!')
     view=0
 while True:
     try:
-        n=int(input('수 입력:'))
+        n=int(input('input intager:'))
         break
     except:
-        print('숫자 형태로 입력하세요!')
+        print('Please input intager!')
 
 nT=n
 Tstep=0
 resT=[n]
-print('---일반 콜라츠 추측 계산---')
+print('---T(n) : General Collatz Conjecture---')
 while nT!=1:
     #콜라츠 추측의 일반적 표현인 T(n)값 계산
     if nT%2==0:
-        print(f'{nT} : 짝수이므로...',end=' ')
+        print(f'{nT} is even :',end=' ')
         nT=nT//2
         resT.append(nT)
     else:
-        print(f'{nT} : 홀수이므로...',end=' ')
+        print(f'{nT} is odd :',end=' ')
         nT=3*nT+1
         resT.append(nT)
     Tstep+=1
-    print(f'[{Tstep}번째에 {nT}로 변합니다.]')
+    print(f'changed {nT} in {Tstep} step')
 print(resT)
 
 nTP=n
 TPstep=0
 resTP=[n]
-print('---스텝 최적화 콜라츠 추측 계산---')
+print('---T\'(n) : Step optimization of Collatz Conjecture---')
 while nTP!=1:
-    #콜라츠 추측의 스텝 최적화형(?)인 T'(n)값 계산
     if nTP%2==0:
-        print(f'{nTP} : 짝수이므로...',end=' ')
+        print(f'{nTP} is even :',end=' ')
         nTP=nTP//2
         resTP.append(nTP)
     else:
-        print(f'{nTP} : 홀수이므로...',end=' ')
+        print(f'{nTP} is odd :',end=' ')
         nTP=(3*nTP+1)//2
         resTP.append(nTP)
     TPstep+=1
-    print(f'[{TPstep}번째에 {nTP}로 변합니다.]')
+    print(f'changed {nTP} in {TPstep} step')
 print(resTP)
+
+print('\nmax from T(n) :',max(resT[1:]))
 
 if view:
     x=range(Tstep+1)
