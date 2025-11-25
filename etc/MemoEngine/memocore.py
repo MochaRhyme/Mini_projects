@@ -24,11 +24,14 @@ def doIExistInMemo():
                 return True
     return False
 
-def save(l):
+def save():
     if not memoHandle():
         return False
-    with open(memopath,'w+',encoding='utf-8') as f:
-        pass
+    with open(memopath,'a+',encoding='utf-8') as f:
+        items=f.readlines()
+        print(items)
+
+        
 
 
 def load(): 
@@ -37,7 +40,7 @@ def load():
     with open(memopath,'r',encoding='utf-8') as f:
         items=f.readlines()
         for i in items:
-            l=i.split(';')
+            l=i.strip().split(';')
             if l[0]==workingfor:
                 return l[1:]
     print('Error in memocore : 메모에는 이 코드를 위한 값이 없습니다. None이 반환됩니다.')

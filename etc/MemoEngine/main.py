@@ -1,2 +1,2 @@
 import memocore as mc
-print(mc.load())
+print(mc.save())
