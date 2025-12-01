@@ -1,2 +1,0 @@
-asdf.py;kjshadfkjh;jhsndfkjhsda
-main.py;123;53435;56456;43
