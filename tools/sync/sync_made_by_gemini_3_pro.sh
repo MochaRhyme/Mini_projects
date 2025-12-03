@@ -205,8 +205,8 @@ process_log() {
 echo "========================================="
 echo " Git Multi-Repo Automation Tool"
 echo "========================================="
-echo " 1️⃣ PULL ALL (Restore ignored files)"
-echo " 2️⃣ PUSH ALL (Backup ignored files)"
+echo " [1] PULL ALL (Restore ignored files)"
+echo " [2] PUSH ALL (Backup ignored files)"
 echo "========================================="
 read -n 1 -s -r -p "Select Mode (1 or 2): " selection
 
