@@ -18,7 +18,7 @@ def cc(l:list,m:str):
                 l.append((3*l[-1]+1)//2)
             elif m=='pp':
                 if 3*l[-1]-1 in l:
-                    print(AE(f'[{steps[2]+1} 번째에 루프가 감지되어 종료합니다.]','91'))
+                    print(AE(f'[{steps[2]+1} 번째에 {3*l[-1]-1}(으)로 루프됩니다.]','91'))
                     break
                 l.append(3*l[-1]-1)
         if m=='d':
