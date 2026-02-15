@@ -33,7 +33,7 @@ def cc(l:list,m:str):
         print(AE('번째에 ','93'),end='')
         print(AE(f'{l[-1]}(으)로 바뀝니다.','93'))
 
-def vcc(l:list,color:str,linestyle:str,label:str,):
+def vcc(l:list,color:str,linestyle:str,label:str):
     plt.plot(l,color=color,marker='o',linestyle=linestyle,label=label)
     #this code by gemini---
     for i, value in enumerate(l):
