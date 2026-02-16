@@ -17,4 +17,5 @@ def isPrimeM(num:int):
         return False
     if num<0:
         return None
-    
+
+print(isPrimeD(7))

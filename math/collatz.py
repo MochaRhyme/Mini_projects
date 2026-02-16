@@ -76,7 +76,7 @@ cc(resTP,'p')
 print(resTP)
 
 resTPP=[n]
-print('\n---T\'\'(n) : 루프될 수도 있는 콜라츠 추측(3n-1)---')
+print('\n---T\'\'(n) : 루프될 가능성이 있는 콜라츠 추측(3n-1)---')
 cc(resTPP,'pp')
 print(resTPP)
 
