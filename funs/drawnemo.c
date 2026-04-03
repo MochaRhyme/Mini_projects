@@ -1,13 +1,17 @@
 #include<stdio.h>
-#include<windows.h>
+#if defined(_WIN32)||defined(_WIN64)
+    #include<windows.h>
+#endif
 void main(){
-    SetConsoleOutputCP(CP_UTF8);
+    #if defined(_WIN32)||defined(_WIN64)
+        SetConsoleOutputCP(CP_UTF8);
+    #endif
     int width,height,i,j;
+    scanf("%d %d",&width,&height);
     if(i<2||j<2){
         printf("print error");
         return;
     }
-    scanf("%d %d",&width,&height);
     for(i=0;i<height;i++){
         for(j=0;j<width;j++){
             if(i==0&&j==0) printf("┌");
