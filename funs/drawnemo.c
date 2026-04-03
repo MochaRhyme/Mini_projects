@@ -8,7 +8,7 @@ void main(){
     #endif
     int width,height,i,j;
     scanf("%d %d",&width,&height);
-    if(i<2||j<2){
+    if(width<2||height<2){
         printf("print error");
         return;
     }
