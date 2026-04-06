@@ -2,15 +2,15 @@
 #if defined(_WIN32)||defined(_WIN64)
     #include<windows.h>
 #endif
-void main(){
+int main(){
     #if defined(_WIN32)||defined(_WIN64)
         SetConsoleOutputCP(CP_UTF8);
     #endif
     int width,height,i,j;
     scanf("%d %d",&width,&height);
     if(width<2||height<2){
-        printf("print error");
-        return;
+        printf("cannot print\n");
+        return 0;
     }
     for(i=0;i<height;i++){
         for(j=0;j<width;j++){
@@ -24,4 +24,5 @@ void main(){
         }
         if(i!=height-1) printf("\n");
     }
+    return 0;
 }
