@@ -10,7 +10,7 @@ int main(){
     scanf("%d %d",&width,&height);
     if(width<2||height<2){
         printf("cannot print\n");
-        return 0;
+        return 1;
     }
     for(i=0;i<height;i++){
         for(j=0;j<width;j++){
