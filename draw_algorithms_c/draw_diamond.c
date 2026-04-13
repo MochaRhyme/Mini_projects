@@ -14,7 +14,7 @@ int main(){
             for(j=0;j<2*i+1;j++) printf("*");
         }else{
             for(j=0;j<i-b+1;j++) printf(" ");
-            for(j=0;j<(h-1)*2-2*i+1;j++) printf("*");
+            for(j=0;j<2*h-2*i-1;j++) printf("*");
         }
         printf("\n");
     }
