@@ -7,9 +7,12 @@ int main(){
         SetConsoleOutputCP(CP_UTF8);
     #endif
     int width,height,i,j;
-    scanf("%d %d",&width,&height);
+    printf("Input width of rectangle : ");
+    scanf("%d",&width);
+    printf("Input height of rectangle : ");
+    scanf("%d",&height);
     if(width<2||height<2){
-        printf("cannot print\n");
+        printf("CANNOT PRINT THAT\n");
         return 1;
     }
     for(i=0;i<height;i++){
@@ -22,7 +25,7 @@ int main(){
             else if(j==0||j==width-1) printf("│");
             else printf(" ");
         }
-        if(i!=height-1) printf("\n");
+        printf("\n");
     }
     return 0;
 }
