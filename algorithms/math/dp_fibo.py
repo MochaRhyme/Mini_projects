@@ -8,14 +8,14 @@ def seqsQuery(n:int,m:str):
         if len(fiboseq)==0:
             fiboseq.append(0)
             fiboseq.append(1)
-        while len(fiboseq)-1!=n:
+        while len(fiboseq)-1<n:
             fiboseq.append(fiboseq[len(fiboseq)-2]+fiboseq[len(fiboseq)-1])
         return fiboseq[n]
     elif m.lower()=='luca':
         if len(lucaseq)==0:
             lucaseq.append(2)
             lucaseq.append(1)
-        while len(lucaseq)-1!=n:
+        while len(lucaseq)-1<n:
             lucaseq.append(lucaseq[len(lucaseq)-2]+lucaseq[len(lucaseq)-1])
         return lucaseq[n]
 
