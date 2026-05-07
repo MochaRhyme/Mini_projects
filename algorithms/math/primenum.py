@@ -34,4 +34,5 @@ def isPrimeE(num:int):
             e[j]=False
     return e[num]
 
-print(isPrimeE(7))
+if __name__=='__main__':
+    print(isPrimeE(7))

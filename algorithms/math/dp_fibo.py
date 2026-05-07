@@ -1,7 +1,7 @@
 import sys
 fiboseq=[]
 lucaseq=[]
-def seqsQuery(n:int,m:str):
+def seqs(n:int,m:str):
     if not isinstance(n,int):
         return -1
     if m.lower()=='fibo':
@@ -19,12 +19,12 @@ def seqsQuery(n:int,m:str):
             lucaseq.append(lucaseq[len(lucaseq)-2]+lucaseq[len(lucaseq)-1])
         return lucaseq[n]
 
-def Query():
+def main():
     oper=list(input().split())
     if oper[0]=='fibo':
-        print(seqsQuery(int(oper[1]),'fibo'))
+        print(seqs(int(oper[1]),'fibo'))
     elif oper[0]=='luca':
-        print(seqsQuery(int(oper[1]),'luca'))
+        print(seqs(int(oper[1]),'luca'))
     elif oper[0]=='debug':
         print('fiboseq :',fiboseq)
         print('lucaseq :',lucaseq)
@@ -33,5 +33,7 @@ def Query():
         sys.exit()
     else:
         print('what?')
-while True:
-    Query()
+        
+if __name__=='__main__':
+    while True:
+        main()

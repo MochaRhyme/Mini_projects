@@ -20,4 +20,5 @@ def interpret_morse(code:str):
             continue
     return ''.join(contents)
 
-print(interpret_morse(input()))
+if __name__=='__main__':
+    print(interpret_morse(input()))
